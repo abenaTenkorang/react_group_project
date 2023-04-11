@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import Proptypes from 'prop-types';
-import { addReserve, cancelReservation } from '../../store/rocket/rocketSlice';
+import { addReservation, cancelReservation } from '../../store/rocket/rocketSlice';
 import './RocketItem.css';
 
 export default function Rocket({ rocket }) {
@@ -32,7 +32,7 @@ export default function Rocket({ rocket }) {
           <button
             type="button"
             className="reserve-btn"
-            onClick={() => dispatch(addReserve(rocket.id))}
+            onClick={() => dispatch(addReservation(rocket.id))}
           >
             Reserve Rocket
           </button>
