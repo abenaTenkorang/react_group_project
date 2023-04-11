@@ -1,0 +1,31 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-missions,
+.profile-rockets {
+  flex: 1;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.profile-missions h2,
+.profile-rockets h2 {
+  text-align: center;
+}
+
+.profile-missions ul,
+.profile-rockets ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-missions li,
+.profile-rockets li {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+}
