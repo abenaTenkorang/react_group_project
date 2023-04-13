@@ -17,31 +17,25 @@ exports[`Navbar component renders correctly 1`] = `
     </h1>
   </div>
   <ul>
-    <li
-      class=""
-    >
+    <li>
       <a
-        class=""
+        class=" "
         href="/Rockets"
       >
         Rockets
       </a>
     </li>
-    <li
-      class=""
-    >
+    <li>
       <a
-        class=""
+        class=" "
         href="/Missions"
       >
         Missions
       </a>
     </li>
-    <li
-      class=""
-    >
+    <li>
       <a
-        class=""
+        class=" "
         href="/MyProfile"
       >
         MyProfile
