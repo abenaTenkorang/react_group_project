@@ -6,6 +6,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Key Features](#key-features)
+    - [🔭 Future Features](#future-features)
     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -37,7 +38,15 @@ This is a web application for a company that provides commercial and scientific 
 
 ### Key Features
 
-- Space Traveller's Hub
+- Fetching Rockets and Missions from API
+- Reserve rockets and join missions
+- See reserved rockets and joined missions in my profile page.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Future Features
+
+- Develop the dragon section
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
