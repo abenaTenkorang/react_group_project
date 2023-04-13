@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const initialState = {
   missions: [],
@@ -13,8 +12,9 @@ export const fetchMissionsAsync = createAsyncThunk(
   'missions/fetchMissionsAsync',
   async () => {
     try {
-      const response = await axios.get(baseURl);
-      const missions = response.data.map((r) => ({
+      const response = await fetch(baseURl);
+      const data = await response.json();
+      const missions = data.map((r) => ({
         id: r.mission_id,
         name: r.mission_name,
         description: r.description,
@@ -26,22 +26,24 @@ export const fetchMissionsAsync = createAsyncThunk(
     }
   },
 );
-/*eslint-disable*/
+
 export const missionSlice = createSlice({
-  name: "missions",
+  name: 'missions',
   initialState,
   reducers: {
     joinMission(state, action) {
+      /*eslint-disable*/
       const newState = state.missions.map((mission) =>
         mission.id !== action.payload ? mission : { ...mission, joined: true }
       );
-
+      /* eslint-enable */
       return {
         ...state,
         missions: newState,
       };
     },
     leaveMission(state, action) {
+      /*eslint-disable*/
       const newState = state.missions.map((mission) =>
         mission.id !== action.payload ? mission : { ...mission, joined: false }
       );
