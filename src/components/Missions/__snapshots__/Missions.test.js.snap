@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions renders correctly 1`] = `
+<section
+  className="container"
+>
+  <h2>
+    Missions
+  </h2>
+  <p>
+    Loading missions...
+  </p>
+</section>
+`;

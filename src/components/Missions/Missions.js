@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchMissionsAsync,
   joinMission,
   leaveMission,
-} from "../../store/missions/missions";
-import "./Missions.css";
+} from '../../store/missions/missions';
+import './Missions.css';
 
 export default function Missions() {
   const missions = useSelector((state) => state.missions.missions || []);

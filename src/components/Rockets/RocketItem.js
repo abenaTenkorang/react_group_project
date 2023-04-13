@@ -1,6 +1,9 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import Proptypes from 'prop-types';
-import { addReservation, cancelReservation } from '../../store/rocket/rocketSlice';
+import {
+  addReservation,
+  cancelReservation,
+} from '../../store/rocket/rocketSlice';
 import './RocketItem.css';
 
 export default function Rocket({ rocket }) {
@@ -43,11 +46,21 @@ export default function Rocket({ rocket }) {
 }
 
 Rocket.propTypes = {
-  rocket: Proptypes.shape({
-    id: Proptypes.string,
-    rocket_name: Proptypes.string,
-    reserved: Proptypes.string,
-    description: Proptypes.string,
-    flickr_images: Proptypes.element,
-  }).isRequired,
+  rocket: PropTypes.shape({
+    id: PropTypes.string,
+    rocket_name: PropTypes.string,
+    reserved: PropTypes.bool,
+    description: PropTypes.string,
+    flickr_images: PropTypes.arrayOf(PropTypes.string),
+  }),
+};
+
+Rocket.defaultProps = {
+  rocket: {
+    id: '',
+    rocket_name: '',
+    reserved: false,
+    description: '',
+    flickr_images: [],
+  },
 };

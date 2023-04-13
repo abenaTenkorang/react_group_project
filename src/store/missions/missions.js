@@ -32,10 +32,11 @@ export const missionSlice = createSlice({
   initialState,
   reducers: {
     joinMission(state, action) {
+      /*eslint-disable*/
       const newState = state.missions.map((mission) =>
         mission.id !== action.payload ? mission : { ...mission, joined: true }
       );
-
+      /* eslint-enable */
       return {
         ...state,
         missions: newState,

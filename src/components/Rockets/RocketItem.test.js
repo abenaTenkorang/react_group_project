@@ -2,14 +2,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../../store/store';
-import Missions from './Missions';
+import Rocket from './RocketItem';
 
-describe('Missions', () => {
+describe('Rocket', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <Missions />
+          <Rocket />
         </Provider>,
       )
       .toJSON();

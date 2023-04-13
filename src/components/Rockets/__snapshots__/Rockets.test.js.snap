@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets renders correctly 1`] = `
+<div>
+  <h2
+    className="loading"
+  >
+    Loading...
+  </h2>
+  <ul
+    className="list"
+  />
+</div>
+`;
