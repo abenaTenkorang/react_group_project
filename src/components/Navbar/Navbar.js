@@ -1,7 +1,7 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import React from "react";
-import PropTypes from "prop-types";
-import "./Navbar.css";
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Navbar.css';
 
 const Navbar = () => (
   <nav className="nav">
@@ -17,12 +17,12 @@ const Navbar = () => (
   </nav>
 );
 
-function CustomLink({ to, children, className = "" }) {
+function CustomLink({ to, children, className = '' }) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
   return (
     <li>
-      <Link to={to} className={`${className} ${isActive ? "active" : ""}`}>
+      <Link to={to} className={`${className} ${isActive ? 'active' : ''}`}>
         {children}
       </Link>
     </li>
@@ -36,7 +36,7 @@ CustomLink.propTypes = {
 };
 
 CustomLink.defaultProps = {
-  className: "",
+  className: '',
 };
 
 export default Navbar;
