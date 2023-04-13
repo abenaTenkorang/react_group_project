@@ -27,6 +27,11 @@ body {
 
 .nav a {
   color: blue;
+  text-decoration: none;
+}
+
+.nav li a.active {
+  text-decoration: underline;
 }
 
 .title {
